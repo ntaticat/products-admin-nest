@@ -6,6 +6,7 @@ export class Product extends Document {
   @Prop({
     unique: true,
     index: true,
+    required: true,
   })
   code: number;
   @Prop({
@@ -14,7 +15,7 @@ export class Product extends Document {
   })
   name: string;
   @Prop({
-    required: false,
+    default: 'No description',
   })
   description: string;
   @Prop({
